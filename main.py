@@ -1,5 +1,7 @@
-from listener import Listener
+from interpreter import Interpreter
 
 if __name__ == '__main__':
-    listener = Listener()
-    listener.listen()
+    interpreter = Interpreter()
+    path = "voices/microphone-results.wav"
+    interpreter.listen(path)
+    print(interpreter.convertToText(path))
